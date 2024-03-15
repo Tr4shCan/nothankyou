@@ -1,0 +1,11 @@
+MONGO_URI= 'mongodb+srv://yejoseph54:yejoseph54@cluster.jqburu9.mongodb.net/?retryWrites=true&w=majority'
+client = MongoClient(MONGO_URI)
+db = client['web']
+
+
+
+
+
+
+def oops404(e):
+  return render_template('404.html')

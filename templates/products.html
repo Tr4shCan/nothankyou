@@ -1,0 +1,21 @@
+<head>
+  {% include 'navbar.html' %}
+</head>
+<body>
+  <h1>Products Page</h1>
+  <form method="post" action="{{url_for('products', username=username)}}">
+    <label for="productid">Enter product id:</label>
+    <input type="text" name="productid"></input>
+    <button type="submit">Delete Product</button>
+  </form>
+
+  <h1>{{username}}'s Products for Sale</h1>
+  <ul>
+    {% for product in products %}
+    <li>
+      {{product.id}} - {{product.name}} - ${{product.price}} -
+      Description:{{product.description}}
+    </li>
+    {% endfor %}
+  </ul>
+</body>

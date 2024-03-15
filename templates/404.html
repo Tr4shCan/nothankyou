@@ -1,0 +1,16 @@
+<head>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='404.css')
+   }}"/>
+   {% include 'navbar.html' %}
+</head>
+<body class="wholepage">
+    <h1>Sorry,</h1>
+    <p>We cannot find the page you're looking for. Try another URL and see if that works.</p>
+
+    <video class="nope" width="800" height="600" controls autoplay>
+        <source src="{{ url_for('static', filename='rayla_lightning.mp4')}}" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</body>
